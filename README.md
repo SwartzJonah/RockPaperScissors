@@ -1,1 +1,2 @@
 # RockPaperScissors
+Program which takes in a user input of rock paper or scissors and a randomly generated computer input of rock paper and scissors and compares them using the rules of the classic game rock paper scissors and then returns a winner.
