@@ -40,6 +40,10 @@ function game(){
     let playTies = 0;
     for (let i = 0; i < 5; i++){
         let playerSelection = prompt("Please enter rock, paper or scissor :D");
+        if (playerSelection == null){
+            console.log("enter something!");
+            i--;
+        } else{
         playerSelection = playerSelection.toLowerCase();
         if (playerSelection != "rock" && playerSelection != "scissor" && playerSelection != "paper"){
             console.log("please enter valid response")
@@ -62,7 +66,7 @@ function game(){
                 console.log("Tie! :|");
                 break;
         }
-    }
+    }}
     }
     console.log(playerWins, computerWins, playTies);
     if (playerWins > computerWins){
