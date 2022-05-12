@@ -1,3 +1,11 @@
+// Buttons
+
+
+
+
+
+
+//Functions
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
@@ -33,12 +41,29 @@ function playRound(playerSelection, computerSelection){
             return "tie";
         }
 }
+
+const rockBtn = document.querySelector('#rockBtn');
+rockBtn.addEventListener('click', () => {
+    playRound("rock", computerPlay());
+  });
+  
+const paperBtn = document.querySelector('#paperBtn');
+paperBtn.addEventListener('click', () => {
+    playRound("paper", computerPlay());
+  });
+
+const scissorBtn = document.querySelector('#scissorBtn');
+scissorBtn.addEventListener('click', () => {
+    playRound("scissor", computerPlay());
+  });
+
+
         
 function game(){
     let playerWins = 0;
     let computerWins = 0;
     let playTies = 0;
-    for (let i = 0; i < 5; i++){
+    for (let i = 0; i < 0; i++){
         let playerSelection = prompt("Please enter rock, paper or scissor :D");
         if (playerSelection == null){
             console.log("enter something!");
@@ -77,3 +102,6 @@ function game(){
         console.log("ew a tie");
     }
 }
+
+
+
